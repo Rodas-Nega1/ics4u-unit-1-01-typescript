@@ -11,10 +11,14 @@ import promptSync from 'prompt-sync'
 
 const prompt = promptSync()
 
+const max = 1100
+
+const density = 20
+
 const userInput = prompt('Enter log length (0.25 m, 0.5 m, or 1.0 m): ')
 
 const logLength = parseFloat(userInput)
-const truckInventory = 1100 / (20 * logLength)
+const truckInventory = max / (density * logLength)
 
 console.log(`\nThe truck can hold up to this number of logs: ${truckInventory}`)
 
